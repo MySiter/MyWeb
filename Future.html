@@ -1,0 +1,708 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title> Tutorage</title>
+
+   <script src="JQuery/jquery-3.3.1.min.js">   </script>
+   
+    <style>
+	   *
+	   { margin:0px;
+	   box-sizing:border-box;}
+	
+	     header
+	  { margin-bottom:20px;
+	 height:100px;
+	   background-color:#FFF;
+	   width:100%;
+	   
+	  }
+	   .header
+	{ font-family:"Times New Roman";
+	font-size:17px;
+	
+	}
+	.header h1
+	{padding-top:30px;
+	padding-left:40px;
+	}
+	
+	#Option
+	{ background-color:rgb(45,162,80);
+	   color:#FFF;
+	   width:150px;
+	   border-radius:50%;
+	   padding:12px 17px;
+	   font-size:19px;
+	   border:none;
+	   outline:none;
+		
+		}
+		.menu
+		{float:right;
+		 position:relative;
+		 top:-45px;
+		 left:20px;}
+	 .MenuOption a
+	   { display:block;
+	   background-color:rgb(251,191,95);
+	   color:rgb(45,62,80);
+	   border-radius:50%;
+	   width:150px;
+	   text-align:center;
+	   padding:10px 16px;
+	   font-size:18px;
+	   text-decoration:none;
+	   border:1px solid white;
+	   box-sizing:border-box;}
+	   .MenuOption a:hover
+	   { background-color:rgb(45,162,80);
+	   color:white;}
+      .MenuOption
+	  { display:none;}
+    
+	.header2
+	{ 
+	width:160px;
+	height:35px;
+	float:right;
+	position:relative;
+	top:-38px;
+	left:-300px}
+	   #span
+			{
+			
+				display:table;	
+			}
+			#span img
+			{
+				height:28px;
+				width:28px;
+				display:table-cell;
+				vertical-align:middle;
+			}
+			#span span
+			{
+					display:table-cell;
+				vertical-align:middle;
+				font-size:19px;
+			}
+		    .ImageSite
+			{ width:1200px;
+			margin-left:auto;
+			margin-right:auto;
+        	margin-bottom:40px;
+			height:600px;
+			overflow: hidden;
+			}
+			.ImageSite::after
+			{content: "";
+			visibility: hidden;
+			display: block;
+			clear: both;
+
+
+			}
+			.Slider
+            {
+            	position: relative;
+            	width: 7200px;
+            	height: 600px;
+            }
+			.sliderBox
+			{ float: left;
+			width: 1200px;
+			height: 600px; }
+           .sliderBox img
+           { width: 1200px;
+           height: 600px; }
+
+
+
+	    .ImageSite h1
+		{ font-size:70px;
+		color:white;
+		font-weight:bold;
+		text-align:center;
+		text-transform:capitalize;
+		font-family:"Times New Roman";}	     
+		.ImageSite span
+		{ color:#03C;
+		 font-weight:bold;
+		font-size:24px;
+		font-family:"Times New Roman";}
+		
+		#start
+		{ 
+		width:700px;
+		position: relative;
+		top: -400px;
+		text-align:center;
+		margin-left:auto;
+		margin-right:auto;
+		}
+		
+		
+	   	.education
+		{
+		width:100%;
+			padding-left:30px;
+		padding-right:20px;
+		height:700px;
+		}
+		.education h1
+		{ font-size:40px;
+		font-family:"Times New Roman";
+		font-weight:bold;
+		padding-top:30px;
+	text-align:center;
+		padding-bottom:50px;
+		}
+		.course
+		{
+		width:420px;
+		margin-left:2px;
+		height:500px;
+		float:left;}
+		.course1 h3
+		{ color:rgb(251,191,95);
+		font-size:28px;
+		padding-left:20px;
+		padding-top:50px;}
+		.course1 p
+		{ color:#666;
+		font-size:17px;
+		padding-left:20px;
+		padding-top:10px;
+		padding-right:10px;}
+		
+		.course3
+		{ background-color:rgb(45,62,80);
+		
+		padding-left:20px;
+		padding-right:20px;
+		}
+		
+		.course3 h2
+		{ color:white;
+		text-align:center;
+		font-weight:bold;
+		font-size:27px;
+		padding-top:30px;
+		padding-bottom:30px }
+		.course3 span
+		{ color:white;
+		font-size:20px;
+		
+		 }
+		.select
+		{ width:100%;
+		height:40px;
+		font-size:15px;
+		outline:none;
+		margin-top:10px;
+		margin-bottom:10px;
+		color:white;
+		background-color:transparent;
+		border:1px solid white;
+		}
+	  .btn
+	  { color:rgb(251,191,95);
+	  width:100%;
+	  font-size:17px;
+	  height:40px;
+	  background-color:transparent;
+	  outline:none;
+	  border:2px solid rgb(251,191,95);
+	margin-top:20px;	  
+	  }
+	  .btn:hover
+	  { background-color:rgb(251,191,95);
+	  color:white;
+	  cursor:pointer;
+	 }
+	  
+	   .about
+	  { 
+	  height:500px;
+	  width:90%;
+	  background-image:url(Template%20Images/learning.jpg);
+	  background-size:cover;
+	  margin-left:auto;
+	  margin-right:auto;
+	  margin-bottom:30px;
+	  padding:30px;}
+	  .aboutme
+	  { height:400px;
+	  width:600px;
+	  margin-left:auto;
+	  margin-right:auto;
+	   padding-top:20px;
+	   }
+	  .aboutme h2
+	  { font-family:"Times New Roman";
+	  font-size:23px;
+	 color:white; }
+	   .aboutme p
+	  { font-family:"Times New Roman";
+	  font-size:16px;
+	  color:white;
+	  padding-bottom:40px;
+	  }
+	.aboutme h3
+	  { font-family:"Times New Roman";
+	  font-size:33px;
+	  color:white;
+	  padding-top:15px;
+	  padding-bottom:15px}
+	  .btn1
+	  {
+		height:40px;
+		padding:13px 26px;
+		border:none;
+		background-color:white;
+		 color:rgb(136,190,254);
+		outline:none;
+		text-decoration: none;
+		font-family:"Times New Roman";
+		font-size:17px;  
+		  
+		  }
+		  .btn1:hover
+		  { background-color:rgb(136,190,254);
+		  color: white;
+		  cursor: pointer;}
+    
+	
+	
+         .services
+	 { 
+	 height:800px;
+	  padding-left:50px;
+	 width:100%;
+	 }
+	 .services:after
+	 { content:" ";
+	 display:block;
+	 visibility:hidden;
+	 clear:both;}
+       .services h1
+	   { text-align:center;
+	   font-size:45px;
+	   font-family:"Times New Roman";
+	   padding-bottom:40px;}
+	   .best
+	   {
+		   height:620px;
+		   width:400px;
+		   margin-right:3px;
+		   float:left;
+		   }
+		   
+       		   
+       .sub
+	  { 
+	  height:300px;
+	  margin-bottom:60px;
+	  width:100%;
+	  background-image:linear-gradient(to right,blue,rgb(172,132,132),rgb(232,168,71));
+	  text-align:center;
+	  margin-left:auto;
+	  margin-right:auto;}
+      .txt
+	  { margin-top:50px;
+	  height:40px;
+	  font-size:15px;
+	  padding-left:5px;
+	  width:400px;
+	  outline:none;
+	  }
+	  .btn2
+	  { height:40px;
+	  width:120px;
+	  background-color:rgb(57,61,246);
+	  color:white;
+	  font-size:15px;
+	  padding-left:5px;
+	  outline:none;
+	  border:none;}
+     .btn2:hover
+	 { background-color:white;
+	 border:1px solid rgb(57,61,246);
+	 color:rgb(57,61,246);
+	 cursor:pointer;}
+
+ 
+     .popular
+	 { height:700px;
+	 width:100%;
+	padding-left:50px;
+	 margin-bottom:30px;
+	 margin-top:20px;}
+		.popular h1
+		{ font-size:40px;
+		font-family:"Times New Roman";
+		font-weight:bold;
+		padding-top:30px;
+	    text-align:center;
+		padding-bottom:50px;
+		}   
+		.web
+		{margin-right:10px;
+		 float:left;
+		width:400px;}
+		
+     
+	 footer
+	 { height:350px;
+	 width:100%;}
+      .footer
+	  {height:350px;
+	  float:left;}  
+     .aboutUs
+	 { width:28%;
+	 background-color:black;}
+    .aboutUs h2
+{
+    font-size:33px;
+	font-family:"Times New Roman";
+	color:white;
+	padding-top:20px;
+	padding-left:20px;
+	padding-bottom:20px;	
+	
+	}
+     .contact
+	 { width:28%;
+	 background-color:black}
+      .contact h2
+{
+    font-size:33px;
+	font-family:"Times New Roman";
+	color:white;
+	padding-top:20px;
+	padding-left:20px;
+	padding-bottom:20px;	
+	
+	}
+	 
+	 .copyright
+	 { width:44%;}
+     .right
+	 { height:40px;
+	 background-color:black;}
+	 .copyright2
+	 { 
+	 width:44%;
+	 height:40px;
+   background-color:#333;
+	 margin-left:auto;
+	 text-align:center;
+	 color:#CCC;
+	 margin-right:auto;}
+	  .copyright2 span
+	  { font-family:"Times New Roman";
+	  font-size:19px;}
+    
+	 </style>
+</head>
+<body>
+
+  
+  <header>
+     <div class="header"> 
+      <h1> TUTORAGE </h1>  
+     </div>
+     <div class="header2">
+        <div id="span">
+   <img src="Template Images/phone.png" />
+        <span> 040-009000089  </span>
+       </div>
+     </div>
+       <div class="menu">
+        <button id="Option"> Menu </button>     
+       <div class="MenuOption">     
+      <a href="#ed">  Education    </a>
+      <a href="#online">  Online Courses    </a>
+      <a href="#sub">  Subscribe    </a>
+      <a href="#ser">  Services   </a>
+      <a href="#pop">  Courses    </a>
+      </div>    
+       </div>
+    
+          
+</header>
+
+   <script>
+     $(document).ready(function(e){
+		   $("#Option").click(function(e){
+		 $(".MenuOption").slideToggle(2000);	   
+			   });		   
+		   });
+          
+   </script>
+    <script type="text/javascript">
+    	   $(document).ready(function(){
+        
+        setInterval(ChangeImage,2000);    
+    var count=0;
+    var imageWidth=0; 
+    
+    function ChangeImage()
+    {
+    count=count+1;
+  imageWidth=imageWidth+1200;
+      if(count==6)
+    { $(".Slider").css("margin-left",0);
+       count=0;
+       imageWidth=0;
+ }
+  else
+  	{ $(".Slider").animate({"margin-left":"-"+imageWidth},1000);}
+   
+}
+   });
+
+    </script>
+
+    <div class="ImageSite">
+          <div class="Slider">
+     <div class="sliderBox"> <img src="Slider Images/study2.jpeg">   </div>
+     <div class="sliderBox"> <img src="Slider Images/3.jpeg">        </div>
+     <div class="sliderBox"> <img src="Slider Images/17.jpeg">       </div>
+     <div class="sliderBox"> <img src="Slider Images/20.jpeg">       </div>
+     <div class="sliderBox"> <img src="Slider Images/18.jpg">        </div>
+     <div class="sliderBox"> <img src="Slider Images/16.jpeg">       </div>
+        
+          </div>
+          <div id="start">
+        <h1> Start&nbsp;learning&nbsp;for Successful&nbsp;Future  </h1>
+      
+         <span> We Have The Perfect Accommodation For You.  </span>
+      </div>
+    
+
+    
+
+</div>
+
+
+
+    <div class="education" id="ed">
+         <h1> OUR EDUCATION </h1>
+         <div class="course1 course">
+            <h3> Quick Help  </h3>
+             <p> On the Insert tab, the galleries include items that are designed to coordinate with the overall look of your document. </p>
+            <h3> Scholarship For Students  </h3>
+             <p> On the Insert tab, the galleries include items that are designed to coordinate with the overall look of your document. </p>
+            <h3> Sports & Event </h3>
+             <p> On the Insert tab, the galleries include items that are designed to coordinate with the overall look of your document. </p>
+         
+         </div>
+         <div class="course1 course">
+           <h3> In Your Country  </h3>
+             <p> On the Insert tab, the galleries include items that are designed to coordinate with the overall look of your document. </p>
+            <h3> Sports & Event  </h3>
+             <p> On the Insert tab, the galleries include items that are designed to coordinate with the overall look of your document. </p>
+            <h3> Quick Help </h3>
+             <p> On the Insert tab, the galleries include items that are designed to coordinate with the overall look of your document. </p>
+         
+         
+         </div>
+         <div class="course3 course">
+             <h2> Courses Seacrh </h2> 
+            <span> Select Degree  </span>
+          <br />
+    <select class="select">
+        <option> Master's Degree </option>
+        <option> Bachelor's Degree </option>
+    </select>
+            <span> Ceategory </span>
+          <br />
+    <select class="select">
+        <option> Master's Degree </option>
+        <option> Bachelor's Degree </option>
+    </select>
+            <span>   Subject </span>
+          <br />
+    <select class="select">
+        <option> Master's Degree </option>
+        <option> Bachelor's Degree </option>
+    </select>
+    
+      <button class="btn"> Search   </button>
+         </div>
+      
+      
+    
+    
+    </div>   
+
+   <div class="about" id="online">
+   
+       <div class="aboutme">
+          <h2> GET 100 OF ONLINE COURSES FOR FREE </h2>
+       <h3> We Have 15 Year Experience <br />
+In This Passion  </h3>
+     <p>On the Insert tab, the galleries include items that are designed to coordinate with the overall look of your document. You can use these galleries to insert tables, headers, footers, lists, cover pages, and other document building blocks. When you create pictures, charts, or diagrams, they also coordinate with your current document look. </p>
+   
+     <a href="#more" class="btn1"> ABOUT ME  </a>
+   </div>
+   
+   
+   </div>
+
+   <div class="services" id="ser">
+       <h1> SERVICES  </h1>
+    <div class="best1 best"> 
+         <img src="Template Images/best2.png" style="height:150px;width:150px;margin-left:120px;margin-bottom:20px;" />
+       <h2 style="font-size:20px;font-family:Verdana;text-align:center;margin-bottom:20px;"> Best Education System </h2>
+     <p style="text-align:justify;font-size:18px;margin-bottom:40px;padding:5px"> On the Insert tab, the galleries include items that are designed to coordinate. items that are designed to coordinate.</p>
+         <img src="Template Images/best2.png" style="height:150px;width:150px;margin-left:120px;margin-bottom:20px;" />
+       <h2 style="font-size:20px;font-family:Verdana;text-align:center;margin-bottom:20px;"> Best Education System </h2>
+     <p style="text-align:justify;font-size:18px;margin-bottom:40px;padding:5px"> On the Insert tab, the galleries include items that are designed to coordinate. items that are designed to coordinate.</p>
+      
+      
+      </div>   
+    <div class="best2 best">
+     <img src="Template Images/best3.jpg" style="height:150px;width:150px;margin-left:120px;margin-bottom:20px;" />
+       <h2 style="font-size:20px;font-family:Verdana;text-align:center;margin-bottom:20px;"> Learning Management </h2>
+     <p style="text-align:justify;font-size:18px;margin-bottom:40px;padding:5px"> On the Insert tab, the galleries include items that are designed to coordinate. items that are designed to coordinate.</p>
+         <img src="Template Images/best3.jpg" style="height:150px;width:150px;margin-left:120px;margin-bottom:20px;" />
+       <h2 style="font-size:20px;font-family:Verdana;text-align:center;margin-bottom:20px;"> Learning Management</h2>
+     <p style="text-align:justify;font-size:18px;margin-bottom:40px;padding:5px"> On the Insert tab, the galleries include items that are designed to coordinate. items that are designed to coordinate.</p>
+      
+      
+    
+       </div>   
+    <div class="best3 best"> 
+    
+        <img src="Template Images/best5.png" style="height:150px;width:150px;margin-left:120px;margin-bottom:20px;" />
+       <h2 style="font-size:20px;font-family:Verdana;text-align:center;margin-bottom:20px;"> Online Certificate </h2>
+     <p style="text-align:justify;font-size:18px;margin-bottom:40px;padding:5px"> On the Insert tab, the galleries include items that are designed to coordinate. items that are designed to coordinate.</p>
+         <img src="Template Images/best5.png" style="height:150px;width:150px;margin-left:120px;margin-bottom:20px;" />
+       <h2 style="font-size:20px;font-family:Verdana;text-align:center;margin-bottom:20px;"> Online Certificate</h2>
+     <p style="text-align:justify;font-size:18px;margin-bottom:40px;padding:5px"> On the Insert tab, the galleries include items that are designed to coordinate. items that are designed to coordinate.</p>
+    
+      </div>   
+   
+   </div>
+
+   <div class="sub" id="sub">
+    <h2 style="font-family:Verdana;font-size:35px;padding-top:70px">  Subscribe Today For New Updates </h2>
+     <input type="text" class="txt" placeholder="Enter your email..." /> 
+     <button class="btn2"> SUBSCRIBE  </button>
+   </div>
+    <script type="text/javascript">
+     $(document).ready(function(e){
+       var count=0;
+     	setInterval(Gradient,1000);
+     function Gradient()
+     { 
+ count=count+1;
+  switch(count)
+  {
+     case 1:
+     $(".sub").css("background-image","linear-gradient(to right,rgb(250,159,37),rgb(255,174,201),rgb(232,168,71))");
+     break;
+
+     case 2:
+     $(".sub").css("background-image","linear-gradient(to left,rgb(128,64,64),rgb(255,255,0),rgb(128,128,128))");
+     break;
+     
+     case 3:
+     $(".sub").css("background-image","linear-gradient(to right,rgb(250,159,37),rgb(64,115,191),rgb(232,168,71))");
+     break;
+     
+     case 4:
+     $(".sub").css("background-image","linear-gradient(to right,rgb(244,11,34),rgb(255,174,201),rgb(31,34,35))");
+     break;
+
+    default:
+    $(".sub").css("background-image","linear-gradient(to right,blue,rgb(172,132,132),rgb(232,168,71))");
+    count=0;
+    break;
+
+  }
+
+  }
+
+	   });
+
+
+    </script>
+     <div class="popular" id="pop">
+        <h1> POPULAR COURSES </h1>
+         <div class="Photoshop web">
+             <img src="Template Images/study3.jpeg" style="height:300px;width:370px;margin:10px;" />
+  <h3 style="font-family:Verdana;font-size:19px;padding-left:25px;padding-top:15px;padding-bottom:15px"> Learn Photoshop.  </h3>       
+         <p style="color:grey;font-size:19px;padding-left:25px;padding-bottom:20px">On the Insert tab, the galleries include items that are designed to coordinate with the overall look of your document.  </p>
+            </div>
+         <div class="html web"> 
+         
+                      <img src="Template Images/study4.jpeg" style="height:300px;width:370px;margin:10px;" />
+  <h3 style="font-family:Verdana;font-size:19px;padding-left:25px;padding-top:15px;padding-bottom:15px"> Learn HTML5.  </h3>       
+         <p style="color:grey;font-size:19px;padding-left:25px;padding-bottom:20px">On the Insert tab, the galleries include items that are designed to coordinate with the overall look of your document.  </p>
+
+           </div>
+
+
+         <div class="js web">  
+         
+         
+         
+         
+                      <img src="Template Images/best7.jpg" style="height:300px;width:370px;margin:10px;" />
+  <h3 style="font-family:Verdana;font-size:19px;padding-left:25px;padding-top:15px;padding-bottom:15px"> Learn Node.js.  </h3>       
+         <p style="color:grey;font-size:19px;padding-left:25px;padding-bottom:20px">On the Insert tab, the galleries include items that are designed to coordinate with the overall look of your document.  </p>
+ </div>
+       
+     
+     </div>
+    
+    
+    
+     <footer id="more">
+   <div class="aboutUs footer">
+       <h2> About Us </h2>
+     <p style="color:grey;padding-left:20px;font-size:19px;padding-bottom:25px">
+    On the Insert tab, the galleries include items that are designed to coordinate with the overall look of your document. You can use these galleries to insert tables, headers, footers, lists, cover pages, and other document building blocks. When you create pictures, charts, or diagrams, they also coordinate with your current document look. 
+     
+     </p>
+   <img src="Template Images/fbicon2.png" style="height:40px;width:40px;margin-left:13px;" />
+   <img src="Template Images/gmailicon.png" style="height:40px;width:40px;margin-left:13px;" />
+   <img src="Template Images/link.png" style="height:40px;width:40px;margin-left:13px;" />
+   <img src="Template Images/twiticon.png" style="height:40px;width:40px;margin-left:13px;" />
+
+
+
+   </div>
+   <div class="footer copyright">
+   </div>
+   <div class="contact footer">
+       <h2> Contact Us </h2>
+  
+       <h4 style="font-size:25px;color:white;font-family:'Times New Roman';padding-left:20px;padding-bottom:20px"> Location :  </h4>
+     <p style="color:grey;padding-left:20px;font-size:19px;padding-bottom:25px"> 098756 4th block building ABC<br />
+ Avenue XYZ City </p>
+       <h4 style="font-size:25px;color:white;font-family:'Times New Roman';padding-left:20px;padding-bottom:20px"> Phone :  </h4>
+     <p style="color:grey;padding-left:20px;font-size:19px;padding-bottom:25px"> Phone : +21-94858986779<br />
+ Email : Info@example.com</p>
+   
+   
+   </div>
+   
+   
+</footer>
+
+   <div class="right">
+   
+   
+<div class="copyright2">
+     <span>  CopyRights(2018) Tutorage. All Rights Reserved. </span>
+   
+   </div>
+   </div>
+</body>
+</html>
